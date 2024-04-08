@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "Nunito_sans_regular";
+    src: url(../fonts/Regular/Nunito-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Nunito_sans_medium";
+    src: url(../fonts/Medium/Nunito-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Nunito_sans_sBold";
+    src: url(../fonts/SemiBold/Nunito-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Nunito_sans_Bold";
+    src: url(../fonts/Bold/Nunito-Bold.ttf);
+    font-weight: 700;
+}
+
+:root {
+    --font-regular: Nunito_sans_regular,"sans-serif";
+    --font-medium: Nunito_sans_medium , "sans-serif";
+    --font-sBold: Nunito_sans_sBold , "sans-serif";
+    --font-bold: Nunito_sans_Bold , "sans-serif";
+}
+
+.font-regular { font-family: var(--font-regular); }
+.font-medium { font-family: var(--font-medium); }
+.font-sBold { font-family: var(--font-sBold); }
+.font-Bold { font-family: var(--font-bold); }

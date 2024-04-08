@@ -1,0 +1,21 @@
+.d-flex { display: flex; }
+.fD-R { flex-direction: row; }
+.fD-C { flex-direction: column; }
+.jC-C { justify-content: center; }
+.jC-SB { justify-content: space-between; }
+.jC-SA { justify-content: space-around; }
+.jC-FE { justify-content: flex-end; }
+
+.al-C { align-items: center; }
+.al-FS { align-items: flex-start; }
+
+.fG-1 { flex-grow: 1; }
+.fG-2 { flex-grow: 2; }
+.fS-0 { flex-shrink: 0; }
+
+.g-10 { gap: 10px; }
+.g-15 { gap: 15px; }
+.g-20 { gap: 20px; }
+.g-25 { gap: 25px; }
+.g-30 { gap: 30px; }
+.g-40 { gap: 40px; }

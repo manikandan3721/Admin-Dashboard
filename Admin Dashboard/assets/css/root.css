@@ -1,0 +1,28 @@
+
+/* common styles */
+@import url(./global.css);
+@import url(./fonts.css);
+@import url(./colors.css);
+@import url(./flex.css);
+@import url(./style-bits.css);
+@import url(./button.css);
+@import url(./animations.css);
+
+/* popup modal */
+@import url(./popup.css);
+
+/* components styles */
+@import url(./home.css);
+@import url(./form.css);
+@import url(./sidebar.css);
+@import url(./dashboard.css);
+@import url(./page-layout.css);
+@import url(./invoice.css);
+@import url(./notes.css);
+
+/* Date Picker */
+@import url(./datePicker.css);
+
+/* Responsive */
+@import url(./responsive.css);
+

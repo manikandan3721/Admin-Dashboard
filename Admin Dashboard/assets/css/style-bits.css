@@ -1,0 +1,107 @@
+.f10 { font-size: 10px; }
+.f13 { font-size: 13px; }
+.f14 { font-size: 14px; }
+.f15 { font-size: 15px; }
+.f18 { font-size: 18px; }
+.f20 { font-size: 20px; }
+.f22 { font-size: 22px; }
+.f25 { font-size: 25px; }
+.f26 { font-size: 26px; }
+.f28 { font-size: 28px; }
+.f30 { font-size: 30px; }
+.f40 { font-size: 40px; }
+
+/* margin left */
+.mL5 { margin-left: 5px; }
+.mL10 { margin-left: 10px; }
+.mL15 { margin-left: 15px; }
+.mL20 { margin-left: 20px; }
+.mL30 { margin-left: 30px; }
+.mL40 { margin-left: 40px; }
+.mL50 { margin-left: 50px; }
+.mL60 { margin-left: 60px; }
+
+/* margin -top */
+.mT10 { margin-top: 10px; }
+.mT16 { margin-top: 16px; }
+.mT20 { margin-top: 20px; }
+.mT24 { margin-top: 24px; }
+.mT40 { margin-top: 40px; }
+
+/* margin bottom */
+.mB5 { margin-bottom: 5px; }
+.mB10 { margin-bottom: 10px; }
+.mB16 { margin-bottom: 16px; }
+.mB20 { margin-bottom: 20px; }
+.mB24 { margin-bottom: 24px; }
+.mB30 { margin-bottom: 30px; }
+.mB40 { margin-bottom: 40px; }
+.mB60 { margin-bottom: 60px; }
+
+/* margin-left auto */
+.mL-auto { margin-left: auto; }
+
+/* size */
+.s20 { width: 20px; height: 20px; }
+.s30 { width: 30px; height: 30px; }
+.s35 { width: 35px; height: 35px; }
+.s50 { width: 50px; height: 50px; }
+
+/* width */
+.w100pe { width: 100%; }
+.w90pe { width: 90%; }
+.w75pe { width: 75%; }
+.w50pe { width: 50%; }
+.w65pe { width: 65%; }
+.w45pe { width: 45%; }
+.w40pe { width: 40%; }
+.w25pe { width: 25%; }
+.w20pe { width: 22%; }
+.w30pe { width: 30%; }
+.w360px { width: 360px; }
+.w110px { width: 110px; }
+
+/* padding-left */
+.pL10 { padding-left: 10px; }
+.pL15 { padding-left: 15px; }
+.pL20 { padding-left: 20px; }
+
+/* padding-right */
+.pR20 { padding-right: 20px; }
+.pR30 { padding-right: 30px; }
+
+/* padding */
+.p0 { padding: 0 !important }
+.p24 { padding: 24px ; }
+.p20 { padding: 20px ; }
+
+/* padding-Top */
+.pT20 { padding-top: 20px; }
+.pT40 { padding-top: 40px; }
+
+/* text center */
+.tal-C { text-align: center; }
+.tal-R { text-align: right; }
+
+/* inline block */
+.d-inline-block { display: inline-block; }
+
+/* border-radius */
+.br-rounded-sm { border-radius: var(--br-radius-sm); }
+.br-rounded-full { border-radius: var(--br-radius-full); }
+
+/* curser pointer */
+.CP { cursor: pointer; }
+
+/* position */
+.pos_rel { position: relative; }
+.pos_abs { position: absolute; }
+
+/* text overflow */
+.truncate { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+
+/* overflow-hidden */
+.overflow-hidden { overflow: hidden; }
+
+/* hidden */
+.hidden { display: none; }

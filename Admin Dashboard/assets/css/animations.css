@@ -1,0 +1,17 @@
+:root {
+ 
+    --trans: all ease-in-out;
+    --one-sec: .1s;
+    --two-sec: .2s;
+    --three-sec:.3s;
+    --five-sec: .5s;
+
+    --slow-trans : var(--trans) var(--five-sec);
+    --fast-trans : var(--trans) var(--two-sec);
+    --default-trans :var(--trans) var(--three-sec); 
+}
+
+.slow-trans { transition: var(--slow-trans); }
+.fast-trans { transition: var(--fast-trans); }
+.default-trans { transition: var(--default-trans); }
+

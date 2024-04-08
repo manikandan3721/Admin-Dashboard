@@ -1,0 +1,13 @@
+.form-control {
+    border: none;
+    outline: none;
+    background: none;
+    display: block;
+    letter-spacing: 1px;
+    font-size: 17px;
+    padding: 8px 15px;
+    color: var(--c-cyan);
+    width: var(--w-full);
+    transition: var(--fast-trans);
+    border-radius: var(--br-radius-md);
+}

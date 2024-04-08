@@ -1,0 +1,106 @@
+/******************************/
+ /* HEADER PRIMARY */
+/******************************/
+
+.header-primary {
+    background-color: var(--c-primary);
+}
+
+:where( .header-primary, .header-secondary ) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 20px;
+    height: var(--h-header);
+}
+
+.site-title {
+    font-size: 24px;
+    color: var(--c-secondary);
+    font-family: var(--font-bold);
+}
+
+.search-container {
+    position: relative;
+}
+
+.icon-search {
+    position: absolute;
+    top: 7px;
+    left: 9px;
+}
+
+.search-input {
+    width: 350px;
+    padding: 8px 30px;
+    font-size: 13px;
+    color: var(--c-blue-gray);
+    border: 1px solid var(--c-shadow-gray);
+}
+
+.search-input:focus {
+    border: 1px solid var(--c-br-shadow);
+}
+
+.header-primary .menu-items {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-primary .menu-link {
+    display: flex;
+    align-items: center;
+    color: var(--c-blue-gray);
+}
+
+/* END HEADER PRIMARY */
+
+/******************************/
+ /* HEADER SECONDARY */
+/******************************/
+
+.header-secondary {
+    background-color: var(--c-dark-blue);
+    box-shadow: var(--box-shadow);
+}
+
+.menu-icon {
+    display: flex;
+    color: var(--c-secondary);
+}
+
+.breadcrumb-items {
+    display: flex;
+    gap: 20px;
+}
+
+.breadcrumb-link {
+    display: inline-block;
+    position: relative;
+    color: var(--c-secondary);
+}
+
+.breadcrumb-item:not(:last-child) .breadcrumb-link::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: -10px;
+    width: 2px;
+    height: 12px;
+    transform: skew(-20deg);
+    background-color: var(--c-secondary);
+}
+
+.settings-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 13px;
+    padding: 7px 15px;
+    color: var(--c-secondary);
+    border-radius: var(--br-radius-md);
+    border: 1px solid var(--c-shadow-gray);
+}
+
+/* END HEADER SECONDARY */

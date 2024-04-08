@@ -1,0 +1,159 @@
+/******************************/
+ /* REUSABLE COMPONENTS */
+/******************************/
+
+.app-note-container {
+    display: flex;
+    gap: 30px;
+}
+
+.note-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    height: var(--h-full);
+    width: var(--w-full);
+    overflow-y: auto;
+}
+
+.note-card {
+    padding: 16px;
+    width: var(--w-note-card);  
+    background-color: var(--c-dark-blue);
+    border-bottom: 3px solid var(--c-royal-blue);
+    border-radius: var(--br-radius-md) var(--br-radius-md) 0  0;
+}
+
+.note-card[data-filter="work"] {
+    border-color: var( --c-dark-lavender);
+}
+
+.note-card[data-filter="social"] {
+    border-color: var( --c-gold);
+}
+
+.note-card[data-filter="important"] {
+    border-color: var(--c-orange);
+}
+
+/******************************/
+ /* TAB LEFT PANEL */
+/******************************/
+
+.tab-left-panel {
+    max-width: var(--w-tab-left-panel);
+    width: var(--w-full);
+}
+
+:where(.tab-link , .tag-link ){
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: var(--c-blue-gray);
+    font-family: var(--font-sBold);
+    border-radius: var(--br-radius-md);
+}
+
+:where( .tab-link.active , .tag-link.active) {
+    background-color: var(--c-shadow-blue);
+}
+
+.tag-title-box {
+    display: flex;
+    gap: 10px;
+    padding: 10px 20px;
+}
+
+.tab-title {
+    color: var(--c-silver-blue);
+}
+
+.tag-link  {
+    position: relative;
+    padding-inline: 50px;
+}
+
+.tag-link::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    padding: 5px;
+    border-radius: var(--br-radius-full);
+    background-color: var(--c-royal-blue);
+}
+
+ /*END OF TAB LEFT PANEL */
+
+ /******************************/
+ /* NOTE CONTAINER */
+/******************************/
+
+.note-title {
+    color: var(--c-sky-blue);
+}
+
+.note-time {
+    font-size: 12px;
+    color: var(--c-blue-gray);
+}
+
+.note-content {
+    min-height: 100px;
+}
+
+.note-description {
+    font-size: 15px;
+    color: var(--c-silver-blue);
+}
+
+.note-actions-lists {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: var(--w-full);
+}
+
+.note-action-link {
+    display: inline-block;
+    color: var(--c-blue-gray);
+    font-size: 20px;
+}
+
+ /*END OF NOTE CONTAINER */
+
+/******************************/
+ /* MODAL CONTAINER */
+/******************************/
+
+.modal-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 30px;
+}
+
+.close-icon {
+    position: absolute;
+    top: -8px;
+    right: -5px;
+    padding: 3px 5px;
+    cursor: pointer;
+    color: var(--c-cyan);
+    background-color: var(--c-darkSlate-blue);
+    border-radius: var(--br-radius-md);
+}
+
+.modal-container .form-textarea {
+    height: 90px;
+}
+
+.modal-container .btn-discard {
+    background-color: var(--c-darkSlate-blue);
+}
+
+ /*END OF MODAL CONTAINER */

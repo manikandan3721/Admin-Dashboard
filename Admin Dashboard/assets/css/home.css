@@ -1,0 +1,62 @@
+:root {
+    --w-full : 100%;
+    --h-full: 100%;
+    --h-screen: 100vh;
+    --w-screen : 100vw;
+
+    --w-sidebar-panel: 220px;
+    --h-sidebar-panel: 120px;
+    --w-tab-left-panel: 210px;
+    --w-modal: 500px;
+    --w-note-card: 22%;
+    --w-drop-Down: 150px;
+    --h-header: 50px;
+    --h-note-card: 220px;
+
+    --br-radius-sm: 4px;
+    --br-radius-md: 6px;
+    --br-radius-lg: 12px;
+    --br-radius-xl: 20px;
+    --br-radius-full: 50%;
+
+    --box-shadow : 0 10px 10px 10px rgba(0,0,0,.14), 
+    0 1px 18px 0 rgba(0,0,0,.12), 
+    0 3px 5px -1px rgba(0,0,0,.2)
+}
+
+/******************************/
+ /* REUSABLE COMPONENTS */
+/******************************/
+
+.app-container {
+    display: flex;
+    margin-top: calc(var(--h-header) - 30px);
+ }
+
+ .overflow-x {
+    overflow-x: auto;
+ }
+
+ .overflow-x::-webkit-scrollbar {
+    height: 4px;
+ }
+
+ .overflow-y {
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--c-navy-gray);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    appearance: none; 
+}
+
+/* END COMPONENTS */

@@ -1,0 +1,134 @@
+<div class="app-note-container">
+
+    <!-- template -->
+    <template class="notes-template">
+        <div class="note-card">
+            <div class="mB10">
+                <h6 class="note-title mB5">Receive Package</h6>
+                <p class="note-time">13/03/2024</p>
+            </div>
+            <div class="note-content mB16">
+                <p class="note-description">Facilisis curabitur facilisis vel elit sed dapibus sodales purus. curabitur
+                    facilisis vel elit sed dapibus curabitur facilisis vel elit sed dapibus </p>
+            </div>
+            <div class="note-actions">
+                <ul class="note-actions-lists">
+                    <li>
+                        <a href="#" class="note-action-link">
+                            <i class='bx bx-star'></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="note-action-link btn-delete">
+                            <i class='bx bx-trash'></i>
+                        </a>
+                    </li>
+                    <li class=" mL-auto pos_rel dropdown-container">
+                        <a href="#" class="note-action-link btn-action">
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </a>
+                        <ul class="dropdown-lists">
+                            <li class="dropdown-list">
+                                <a class="dropdown-link" href="#" data-name="personal">Personal</a>
+                            </li>
+                            <li class="dropdown-list">
+                                <a class="dropdown-link" href="#" data-name="work">Work</a>
+                            </li>
+                            <li class="dropdown-list">
+                                <a class="dropdown-link" href="#" data-name="social">Social</a>
+                            </li>
+                            <li class="dropdown-list">
+                                <a class="dropdown-link" href="#" data-name="important">Important</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </template>
+
+    <!-- TAB LEFT PANEL -->
+    <section class="tab-left-panel">
+        <div class="tal-C mB40">
+            <a href="#" class="btn btn-send btn-primary open-modal">Add</a>
+        </div>
+        <div>
+            <ul class="tab-lists">
+                <li class="tab-list">
+                    <a href="#" class="tab-link tabToggle active" data-type="all">
+                        <i class='bx bx-edit f20'></i>
+                        <span>All Notes</span>
+                    </a>
+                    <a href="#" class="tab-link">
+                        <i class='bx bx-star f20'></i>
+                        <span> Favourites</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="mT40">
+            <div class="tag-title-box">
+                <i class='bx bx-purchase-tag f22'></i>
+                <span class="tab-title">Tags</span>
+            </div>
+            <ul class="tag-lists">
+                <li class="tag-list">
+                    <a href="#" class="tag-link tabToggle" data-type="personal">Personal</a>
+                </li>
+                <li class="tag-list">
+                    <a href="#" class="tag-link tabToggle" data-type="work">Work</a>
+                </li>
+                <li class="tag-list">
+                    <a href="#" class="tag-link tabToggle" data-type="social">Social</a>
+                </li>
+                <li class="tag-list">
+                    <a href="#" class="tag-link tabToggle" data-type="important">Important</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--END OF TAB LEFT PANEL -->
+
+
+
+    <!-- NOTE CONTAINER -->
+    <section class="note-container">
+
+        <div class="no-cards-message">No cards yet</div>
+    </section>
+
+    <!-- END OF NOTE CONTAINER -->
+
+
+
+    <!-- Modal -->
+    <div class="overlay">
+        <div class="modal-container">
+            <div class="close-icon">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="pT20">
+                <input type="text" class="form-control form-inputs" placeholder="Title">
+            </div>
+            <div class="pT40">
+                <textarea class="form-control form-inputs form-textarea" placeholder="Description"></textarea>
+            </div>
+            <div class="modal-actions">
+                <div>
+                    <a href="#" class="btn btn-discard btn-primary">
+                        Discard
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="btn btn-send btn-primary submit-btn">
+                        Add
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END OF Modal -->
+
+
+
+</div>

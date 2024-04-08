@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width= device-width, initial-scale=1.0" />
+    <meta name="description" content="Admin Dashboard for managing users, content and settings" />
+    <meta name="keywords" content="Admin Dashboard , HTML CSS Admin Dashboard" />
+    <meta name="author" content="Manikandan" />
+
+    <!-- date picker -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/themes/dark.css">
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/root.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <title>Manikandan | Admin Dashboard</title>
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="header-primary">
+            <div class="d-flex al-C g-10">
+                <div class="logo-container">
+                    <a href="#" class="d-flex al-C g-10">
+                        <img src="./assets/images/logo.svg" alt="Logo" class="s35">
+                        <span class="site-title">CORK</span>
+                    </a>
+                </div>
+                <div class="search-container mL40">
+                    <div class="icon-search">
+                        <i class='bx bx-search f18'></i>
+                    </div>
+
+                    <input type="text" class="search-input form-control" placeholder="Search....">
+
+                </div>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-items">
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <img src="./assets/images/canada-flag.png" alt="Canada Flag" class="s20">
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class='bx bx-envelope f25'></i>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class='bx bx-bell f25'></i>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <img src="./assets/images/profile.webp" alt="Avatar" class="s30 br-rounded-sm">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-secondary">
+            <div class="d-flex al-C g-20">
+                <div>
+                    <a href="#" class="menu-icon">
+                        <i class='bx bx-menu f25'></i>
+                    </a>
+                </div>
+                <div>
+                    <ul class="breadcrumb-items">
+                        <li class="breadcrumb-item">
+                            <a href="#" class="breadcrumb-link">
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="breadcrumb-link">
+                                Sales
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="pos_rel dropdown-container">
+                    <a href="#" class="settings-dropdown btn-action">
+                        Settings
+                        <i class='bx bx-chevron-down icon'></i>
+                    </a>
+                    <ul class="dropdown-lists mT20">
+                        <li class="dropdown-list">
+                            <a class="dropdown-link" href="#">Settings</a>
+                        </li>
+                        <li class="dropdown-list">
+                            <a class="dropdown-link" href="#">Email</a>
+                        </li>
+                        <li class="dropdown-list">
+                            <a class="dropdown-link" href="#">Print</a>
+                        </li>
+                        <li class="dropdown-list">
+                            <a class="dropdown-link" href="#">Download</a>
+                        </li>
+                        <li class="dropdown-list">
+                            <a class="dropdown-link" href="#">Share</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <section class="app-container">
+
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar overflow-y">
+            <nav>
+                <ul class="nav-lists">
+                    <li class="nav-list">
+                        <a href="/" class="nav-link active">
+                            <div>
+                                <i class='bx bx-home-alt'></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <h3 class="truncate"> Dashboard</h3>
+                            </div>
+                            <div class="mL-auto">
+                                <i class='bx bx-chevron-down f18'></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" class="nav-link" data-item="apps">
+                            <div>
+                                <i class='bx bx-chip'></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <h3 class="truncate">Apps</h3>
+                            </div>
+                            <div class="mL-auto">
+                                <i class='bx bx-chevron-right f18'></i>
+                            </div>
+                        </a>
+                        <ul class="sidebar-menu-items">
+                            <li class="sidebar-menu-item">
+                                <a href="#" class="sidebar-menu-link" onclick="changePage('notes')">Notes</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a href="#" class="sidebar-menu-link" onclick="changePage('invoice')">Invoice</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a href="#" class="sidebar-menu-link">Contact</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a href="#" class="sidebar-menu-link">Calendar</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" class="nav-link">
+                            <div>
+                                <i class='bx bxs-component'></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <h3 class="truncate"> Components</h3>
+                            </div>
+                            <div class="mL-auto">
+                                <i class='bx bx-chevron-right f18'></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" class="nav-link">
+                            <div>
+                                <i class='bx bx-home-alt'></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <h3 class="truncate"> Elements</h3>
+                            </div>
+                            <div class="mL-auto">
+                                <i class='bx bx-chevron-right f18'></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" class="nav-link">
+                            <div>
+                                <i class='bx bx-home-alt'></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <h3 class="truncate"> Font Icons</h3>
+                            </div>
+                            <div class="mL-auto">
+                                <i class='bx bx-chevron-right f18'></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" class="nav-link">
+                            <div>
+                                <i class='bx bx-home-alt'></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <h3 class="truncate"> Widgets</h3>
+                            </div>
+                            <div class="mL-auto">
+                                <i class='bx bx-chevron-right f18'></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" class="nav-link">
+                            <div>
+                                <i class='bx bx-home-alt'></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <h3 class="truncate"> Tables</h3>
+                            </div>
+                            <div class="mL-auto">
+                                <i class='bx bx-chevron-right f18'></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" class="nav-link">
+                            <div>
+                                <i class='bx bx-home-alt'></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <h3 class="truncate"> Data Tables</h3>
+                            </div>
+                            <div class="mL-auto">
+                                <i class='bx bx-chevron-right f18'></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" class="nav-link">
+                            <div>
+                                <i class='bx bx-home-alt'></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <h3 class="truncate"> Forms</h3>
+                            </div>
+                            <div class="mL-auto">
+                                <i class='bx bx-chevron-right f18'></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" class="nav-link">
+                            <div>
+                                <i class='bx bx-home-alt'></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <h3 class="truncate"> Users</h3>
+                            </div>
+                            <div class="mL-auto">
+                                <i class='bx bx-chevron-right f18'></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" class="nav-link">
+                            <div>
+                                <i class='bx bx-home-alt'></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <h3 class="truncate">Pages</h3>
+                            </div>
+                            <div class="mL-auto">
+                                <i class='bx bx-chevron-right f18'></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" class="nav-link">
+                            <div>
+                                <i class='bx bx-home-alt'></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <h3 class="truncate"> Authentication</h3>
+                            </div>
+                            <div class="mL-auto">
+                                <i class='bx bx-chevron-right f18'></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" class="nav-link">
+                            <div>
+                                <i class='bx bx-home-alt'></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <h3 class="truncate"> Drag & Drop</h3>
+                            </div>
+                            <div class="mL-auto">
+                                <i class='bx bx-chevron-right f18'></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" class="nav-link">
+                            <div>
+                                <i class='bx bx-home-alt'></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <h3 class="truncate"> Maps</h3>
+                            </div>
+                            <div class="mL-auto">
+                                <i class='bx bx-chevron-right f18'></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" class="nav-link">
+                            <div>
+                                <i class='bx bx-home-alt'></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <h3 class="truncate">Charts</h3>
+                            </div>
+                            <div class="mL-auto">
+                                <i class='bx bx-chevron-right f18'></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" class="nav-link">
+                            <div>
+                                <i class='bx bx-home-alt'></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <h3 class="truncate">Start Kit</h3>
+                            </div>
+                            <div class="mL-auto">
+                                <i class='bx bx-chevron-right f18'></i>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-container overflow-y">
+            <div class="card-container">
+
+
+
+                <!-- REVENUE CARD -->
+                <div class="revenue-card col-xxl-8 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <section class="dashboard-card">
+                        <div class="card-header">
+                            <div class="d-flex jC-SB al-C">
+                                <h2 class="card-title">Revenue</h2>
+                                <div class="pos_rel dropdown-container">
+                                    <button class="btn btn-action card-action">
+                                        <i class='bx bx-dots-horizontal-rounded f20 CP'></i>
+                                    </button>
+                                    <ul class="dropdown-lists">
+                                        <li class="dropdown-list">
+                                            <a class="dropdown-link" href="#">Weekly</a>
+                                        </li>
+                                        <li class="dropdown-list">
+                                            <a class="dropdown-link" href="#">Monthly</a>
+                                        </li>
+                                        <li class="dropdown-list">
+                                            <a class="dropdown-link" href="#">Yearly</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="card-subtitle mT24">Total Profit <span class="profit-value mL10 ">$50,000</span>
+                            </p>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex jC-FE pR30">
+                                <ul class="d-flex g-30">
+                                    <li class="card-option-item">
+                                        <a href="#" class="card-option-link">
+                                            <span class="circle-dot"></span>
+                                            Income
+                                        </a>
+                                    </li>
+                                    <li class="card-option-item">
+                                        <a href="#" class="card-option-link">
+                                            <span class="circle-dot expenses"></span>
+                                            Expenses
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="area-chart"></div>
+                        </div>
+                    </section>
+                </div>
+
+
+
+
+                <!-- SALES CARD -->
+                <div class="sales-card col-xxl-4 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <section class=" dashboard-card ">
+                        <div class="card-header mB16">
+                            <h2 class="card-title">Sales by Category</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-img-container">
+                                <img src="./assets/images/category-chart.webp" alt="Chart" class="chart-img">
+                            </div>
+                            <div class="card-options d-flex jC-C">
+                                <ul class="d-flex al-C g-10">
+                                    <li class="card-option-item">
+                                        <a href="#" class="card-option-link">
+                                            <span class="circle-dot"></span>
+                                            Apparel
+                                        </a>
+                                    </li>
+                                    <li class="card-option-item">
+                                        <a href="#" class="card-option-link">
+                                            <span class="circle-dot expenses"></span>
+                                            Sports
+                                        </a>
+                                    </li>
+                                    <li class="card-option-item">
+                                        <a href="#" class="card-option-link">
+                                            <span class="circle-dot expenses"></span>
+                                            Others
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+
+                <!-- DAILY SALES  CARD-->
+                <div class="daily-sales-card col-xxl-4 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <section class="  dashboard-card ">
+                        <div class="card-header mB40">
+                            <div class="d-flex jC-SB al-C">
+                                <h2 class="card-title">Summary</h2>
+                                <div class="pos_rel dropdown-container">
+                                    <button class="btn btn-action card-action">
+                                        <i class='bx bx-dots-horizontal-rounded f20'></i>
+                                    </button>
+                                    <ul class="dropdown-lists">
+                                        <li class="dropdown-list">
+                                            <a class="dropdown-link" href="#">View Report</a>
+                                        </li>
+                                        <li class="dropdown-list">
+                                            <a class="dropdown-link" href="#">Edit Report</a>
+                                        </li>
+                                        <li class="dropdown-list">
+                                            <a class="dropdown-link" href="#">Mark as Done</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-img-container">
+                                <img src="./assets/images/column-chart.webp" alt="Chart" class="chart-img">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+
+                <!-- SUMMARY  CARD-->
+                <div class="summary-card col-xxl-4 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <section class="  dashboard-card ">
+                        <div class="card-header mB40">
+                            <div class="d-flex jC-SB al-C">
+                                <h2 class="card-title">Summary</h2>
+                                <div class="pos_rel dropdown-container">
+                                    <button class="btn btn-action card-action">
+                                        <i class='bx bx-dots-horizontal-rounded f20'></i>
+                                    </button>
+                                    <ul class="dropdown-lists">
+                                        <li class="dropdown-list">
+                                            <a class="dropdown-link" href="#">View Report</a>
+                                        </li>
+                                        <li class="dropdown-list">
+                                            <a class="dropdown-link" href="#">Edit Report</a>
+                                        </li>
+                                        <li class="dropdown-list">
+                                            <a class="dropdown-link" href="#">Mark as Done</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-img-container">
+                                <img src="./assets/images/column-chart.webp" alt="Chart" class="chart-img">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+
+                <!-- ORDERS  CARD-->
+                <div class="orders-card col-xxl-4 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <section class="  dashboard-card ">
+                        <div class="card-header mB40">
+                            <div class="d-flex jC-SB al-C">
+                                <h2 class="card-title">Summary</h2>
+                                <div class="pos_rel dropdown-container">
+                                    <button class="btn btn-action card-action">
+                                        <i class='bx bx-dots-horizontal-rounded f20'></i>
+                                    </button>
+                                    <ul class="dropdown-lists">
+                                        <li class="dropdown-list">
+                                            <a class="dropdown-link" href="#">View Report</a>
+                                        </li>
+                                        <li class="dropdown-list">
+                                            <a class="dropdown-link" href="#">Edit Report</a>
+                                        </li>
+                                        <li class="dropdown-list">
+                                            <a class="dropdown-link" href="#">Mark as Done</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-img-container">
+                                <img src="./assets/images/column-chart.webp" alt="Chart" class="chart-img">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+
+                <!-- WALLET CARD -->
+                <div class="wallet-card col-xxl-4 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <section class=" dashboard-card p0 ">
+                        <div class="card-header">
+                            <div class="d-flex jC-SB">
+                                <div class="user-info CP">
+                                    <img src="./assets/images/user-profile.jpeg" alt="User Profile"
+                                        class="s30 br-rounded-full">
+                                    <span class="user-name">Ram Kumar</span>
+                                </div>
+                                <a href="#" class="card-icon">
+                                    <i class='bx bx-plus f20'></i>
+                                </a>
+                            </div>
+                            <div class="d-flex jC-SB al-C mT40">
+                                <h2>Wallet Balance</h2>
+                                <span class="f28">$100.04</span>
+                            </div>
+                        </div>
+                        <div class="card-body ">
+                            <div class="transaction-info">
+                                <div class="transaction-status-box">
+                                    <div class="d-flex jC-SB">
+                                        <span>Received</span>
+                                        <i class='bx bx-chevron-up '></i>
+                                    </div>
+                                    <div class="transaction-value mT10">
+                                        <span>$97.99</span>
+                                    </div>
+                                </div>
+                                <div class="transaction-status-box">
+                                    <div class="d-flex jC-SB">
+                                        <span>Spent</span>
+                                        <i class='bx bx-chevron-up'></i>
+                                    </div>
+                                    <div class=" transaction-value mT10">
+                                        <span>$80.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p20">
+                                <div class="transaction-status mB24">
+                                    <span>Pending</span>
+                                </div>
+                                <div class="d-flex al-C jC-SB">
+                                    <span class="f13">Netflix</span>
+                                    <span> $ 15.845</span>
+                                </div>
+                                <div class="d-flex al-C jC-SB">
+                                    <span class="f13">BlueHost VPN</span>
+                                    <span> $ 20.845</span>
+                                </div>
+                                <div class="d-flex al-C jC-SA mT24">
+                                    <a href="#" class="transaction-action-link">
+                                        View Details
+                                    </a>
+                                    <a href="#" class="transaction-action-link">
+                                        Pay Now $50.00
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+
+                <!-- TRANSACTION CARD -->
+                <div class="transaction-card col-xxl-4 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <section class=" dashboard-card">
+                        <div class="card-header d-flex jC-SB al-C mB30">
+                            <h2 class="card-title">Transaction</h2>
+                            <div class="pos_rel dropdown-container">
+                                <button class=" btn btn-action card-action">
+                                    <i class='bx bx-dots-horizontal-rounded f20 CP'></i>
+                                </button>
+                                <ul class="dropdown-lists">
+                                    <li class="dropdown-list">
+                                        <a class="dropdown-link" href="#">Weekly</a>
+                                    </li>
+                                    <li class="dropdown-list">
+                                        <a class="dropdown-link" href="#">Monthly</a>
+                                    </li>
+                                    <li class="dropdown-list">
+                                        <a class="dropdown-link" href="#">Yearly</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li class="transaction-list">
+                                    <div class="d-flex al-C g-10">
+                                        <div class="list-icon">
+                                            <i class='bx bx-home-alt f20'></i>
+                                        </div>
+                                        <div class="overflow-hidden">
+                                            <h3 class="transaction-title truncate"> Electricity Bill</h3>
+                                            <small>04 Jan 1:00PM</small>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span>-$16.44</span>
+                                    </div>
+                                </li>
+                                <li class="transaction-list">
+                                    <div class="d-flex al-C g-10">
+                                        <div class="list-icon">
+                                            <i class='bx bx-home-alt f20'></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="transaction-title">Electricity Bill</h3>
+                                            <small>04 Jan 1:00PM</small>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span>-$16.44</span>
+                                    </div>
+                                </li>
+                                <li class="transaction-list">
+                                    <div class="d-flex al-C g-10">
+                                        <div class="list-icon">
+                                            <i class='bx bx-home-alt f20'></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="transaction-title">Electricity Bill</h3>
+                                            <small>04 Jan 1:00PM</small>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span>-$16.44</span>
+                                    </div>
+                                </li>
+                                <li class="transaction-list">
+                                    <div class="d-flex al-C g-10">
+                                        <div class="list-icon">
+                                            <i class='bx bx-home-alt f20'></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="transaction-title">Electricity Bill</h3>
+                                            <small>04 Jan 1:00PM</small>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span>-$16.44</span>
+                                    </div>
+                                </li>
+                                <li class="transaction-list">
+                                    <div class="d-flex al-C g-10">
+                                        <div class="list-icon">
+                                            <i class='bx bx-home-alt f20'></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="transaction-title">Electricity Bill</h3>
+                                            <small>04 Jan 1:00PM</small>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span>-$16.44</span>
+                                    </div>
+                                </li>
+                                <li class="transaction-list">
+                                    <div class="d-flex al-C g-10">
+                                        <div class="list-icon">
+                                            <i class='bx bx-home-alt f20'></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="transaction-title">Electricity Bill</h3>
+                                            <small>04 Jan 1:00PM</small>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span>-$16.44</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+
+
+
+                <!-- WALLET CARD -->
+                <div class="wallet-card col-xxl-4 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <section class=" dashboard-card p0 ">
+                        <div class="card-header fD-C">
+                            <div class="d-flex jC-SB">
+                                <div class="user-info CP">
+                                    <img src="./assets/images/user-profile.jpeg" alt="User Profile"
+                                        class="s30 br-rounded-full">
+                                    <span class="user-name">Ram Kumar</span>
+                                </div>
+                                <a href="#" class="card-icon">
+                                    <i class='bx bx-plus f20'></i>
+                                </a>
+                            </div>
+                            <div class="d-flex jC-SB al-C mT40">
+                                <h2>Wallet Balance</h2>
+                                <span class="f28">$100.04</span>
+                            </div>
+                        </div>
+                        <div class="card-body ">
+                            <div class="transaction-info">
+                                <div class="transaction-status-box">
+                                    <div class="d-flex jC-SB">
+                                        <span>Received</span>
+                                        <i class='bx bx-chevron-up '></i>
+                                    </div>
+                                    <div class="transaction-value mT10">
+                                        <span>$97.99</span>
+                                    </div>
+                                </div>
+                                <div class="transaction-status-box">
+                                    <div class="d-flex jC-SB">
+                                        <span>Spent</span>
+                                        <i class='bx bx-chevron-up'></i>
+                                    </div>
+                                    <div class=" transaction-value mT10">
+                                        <span>$80.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p20">
+                                <div class="transaction-status mB24">
+                                    <span>Pending</span>
+                                </div>
+                                <div class="d-flex al-C jC-SB">
+                                    <span class="f13">Netflix</span>
+                                    <span> $ 15.845</span>
+                                </div>
+                                <div class="d-flex al-C jC-SB">
+                                    <span class="f13">BlueHost VPN</span>
+                                    <span> $ 20.845</span>
+                                </div>
+                                <div class="d-flex al-C jC-SA mT24">
+                                    <a href="#" class="transaction-action-link">
+                                        View Details
+                                    </a>
+                                    <a href="#" class="transaction-action-link">
+                                        Pay Now $50.00
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+
+                <!-- RECENT ORDERS CARD-->
+                <div class="recent-order-card col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <section class=" dashboard-card">
+                        <div class="card-header mB24">
+                            <h2 class="card-title">Recent Orders</h2>
+                        </div>
+                        <div class="card-body overflow-x">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="table-header">
+                                            <div>
+                                                <span>Customer</span>
+                                            </div>
+                                        </th>
+                                        <th class="table-header">
+                                            <div>
+                                                <span>Product</span>
+                                            </div>
+                                        </th>
+                                        <th class="table-header">
+                                            <div>
+                                                <span>Invoice</span>
+                                            </div>
+                                        </th>
+                                        <th class="table-header">
+                                            <div>
+                                                <span>Price</span>
+                                            </div>
+                                        </th>
+                                        <th class="table-header">
+                                            <div>
+                                                <span>Status</span>
+                                            </div>
+                                        </th>
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="table-data">
+                                            <div class="d-flex al-C g-10">
+                                                <img src="./assets/images/user-profile.jpeg" alt="Avatar"
+                                                    class="s30 br-rounded-sm">
+                                                <span>Ravi Kumar</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>headphone</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>#2564454</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>$60.00</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span class="label-success">Paid</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-data">
+                                            <div class="d-flex al-C g-10">
+                                                <img src="./assets/images/user-profile.jpeg" alt="Avatar"
+                                                    class="s30 br-rounded-sm">
+                                                <span>Ravi Kumar</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>headphone</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>#2564454</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>$60.00</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span class="label-success">Paid</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-data">
+                                            <div class="d-flex al-C g-10">
+                                                <img src="./assets/images/user-profile.jpeg" alt="Avatar"
+                                                    class="s30 br-rounded-sm">
+                                                <span>Ravi Kumar</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span> headphone</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span> #2564454</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>$60.00</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span class="label-success">Paid</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-data">
+                                            <div class="d-flex al-C g-10">
+                                                <img src="./assets/images/user-profile.jpeg" alt="Avatar"
+                                                    class="s30 br-rounded-sm">
+                                                <span>Ravi Kumar</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>headphone</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>#2564454</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>$60.00</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span class="label-success">Paid</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-data">
+                                            <div class="d-flex al-C g-10">
+                                                <img src="./assets/images/user-profile.jpeg" alt="Avatar"
+                                                    class="s30 br-rounded-sm">
+                                                <span>Ravi Kumar</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>headphone</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>#2564454</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            $60.00
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span class="label-success">Paid</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-data">
+                                            <div class="d-flex al-C g-10">
+                                                <img src="./assets/images/user-profile.jpeg" alt="Avatar"
+                                                    class="s30 br-rounded-sm">
+                                                <span>Ravi Kumar</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>headphone</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>#2564454</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>$60.00</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span class="label-success">Paid</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+
+
+
+                <!-- TOP SELLING PRODUCT CARD -->
+                <div class="top-selling-card col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <section class="dashboard-card">
+                        <div class="card-header mB24">
+                            <h2 class="card-title">Top Selling Product</h2>
+                        </div>
+                        <div class="card-body overflow-x">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="table-header">
+                                            <div>
+                                                <span>Customer</span>
+                                            </div>
+                                        </th>
+                                        <th class="table-header">
+                                            <div>
+                                                <span>Product</span>
+                                            </div>
+                                        </th>
+                                        <th class="table-header">
+                                            <div>
+                                                <span>Invoice</span>
+                                            </div>
+                                        </th>
+                                        <th class="table-header">
+                                            <div>
+                                                <span>Price</span>
+                                            </div>
+                                        </th>
+                                        <th class="table-header">
+                                            <div>
+                                                <span>Status</span>
+                                            </div>
+                                        </th>
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="table-data">
+                                            <div class="d-flex al-C g-10">
+                                                <img src="./assets/images/user-profile.jpeg" alt="Avatar"
+                                                    class="s30 br-rounded-sm">
+                                                <span>Ravi Kumar</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>headphone</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>#2564454</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>$60.00</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span class="label-success">Paid</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-data">
+                                            <div class="d-flex al-C g-10">
+                                                <img src="./assets/images/user-profile.jpeg" alt="Avatar"
+                                                    class="s30 br-rounded-sm">
+                                                <span>Ravi Kumar</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>headphone</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>#2564454</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>$60.00</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span class="label-success">Paid</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-data">
+                                            <div class="d-flex al-C g-10">
+                                                <img src="./assets/images/user-profile.jpeg" alt="Avatar"
+                                                    class="s30 br-rounded-sm">
+                                                <span>Ravi Kumar</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>headphone</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>#2564454</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>$60.00</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span class="label-success">Paid</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-data">
+                                            <div class="d-flex al-C g-10">
+                                                <img src="./assets/images/user-profile.jpeg" alt="Avatar"
+                                                    class="s30 br-rounded-sm">
+                                                <span>Ravi Kumar</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>headphone</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>#2564454</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>$60.00</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span class="label-success">Paid</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-data">
+                                            <div class="d-flex al-C g-10">
+                                                <img src="./assets/images/user-profile.jpeg" alt="Avatar"
+                                                    class="s30 br-rounded-sm">
+                                                <span>Ravi Kumar</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>headphone</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>#2564454</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>$60.00</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span class="label-success">Paid</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-data">
+                                            <div class="d-flex al-C g-10">
+                                                <img src="./assets/images/user-profile.jpeg" alt="Avatar"
+                                                    class="s30 br-rounded-sm">
+                                                <span>Ravi Kumar</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>headphone</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>#2564454</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span>$60.00</span>
+                                            </div>
+                                        </td>
+                                        <td class="table-data">
+                                            <div>
+                                                <span class="label-success">Paid</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+
+
+
+            <!-- FOOTER -->
+            <footer class="app-footer">
+                <p class="footer-copyright">Copyright &copy; 2024 Dashboard . All rights reserved</p>
+                <p> Coded with &#x2665;</p>
+            </footer>
+        </main>
+
+
+    </section>
+
+
+    <!-- Jquery -->
+    <script src="./assets/script/Jquery.js"></script>
+
+    <!-- Date Picker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
+
+    <!--ApexCharts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- Chart -->
+    <script src="./assets/script/libraries.js"></script>
+
+    <!-- script -->
+    <script src="./assets/script/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,397 @@
+<div class="app-invoice-container">
+
+
+
+    <!-- INVOICE INFO CARD -->
+    <div class="invoice-details-card col-xxl-9 col-xl-12">
+        <section class="invoice-card invoice-info-card">
+
+
+
+            <!-- INVOICE HEADER -->
+            <header class="invoice-header mB40">
+                <div>
+                    <div class="img-upload-container">
+                        <input type="file" class="form-file">
+                        <div class="upload-logo">
+                            <img src="./assets/images/file-upload.png" alt="Upload File Icon" class="s50 mB5">
+                            <p>Click to Upload Picture/ Logo</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <input type="text" class="form-control form-inputs" placeholder="Invoice Label">
+                </div>
+            </header>
+            <!--END OF INVOICE HEADER -->
+
+
+
+            <!--INVOICE FORM -->
+            <div class="invoice-form">
+                <div class="w40pe">
+                    <div class="mB24">
+                        <h2 class="form-title">From:-</h2>
+                    </div>
+                    <ul class="field-lists">
+                        <li class="field-list">
+                            <div class="field-group">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control form-inputs" placeholder="Business Name">
+                            </div>
+                        </li>
+                        <li class="field-list">
+                            <div class="field-group">
+                                <label for="name" class="form-label">Email</label>
+                                <input type="email" class="form-control form-inputs" placeholder="name@gmail.com">
+                            </div>
+                        </li>
+                        <li class="field-list">
+                            <div class="field-group">
+                                <label for="name" class="form-label">Address</label>
+                                <input type="text" class="form-control form-inputs" placeholder="XYZ Street">
+                            </div>
+                        </li>
+                        <li class="field-list">
+                            <div class="field-group">
+                                <label for="name" class="form-label">Phone</label>
+                                <input type="number" class="form-control form-inputs" placeholder="(123) 456 856">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w40pe">
+                    <div class="mB24">
+                        <h2 class="form-title">Bill To:-</h2>
+                    </div>
+                    <ul class="field-lists">
+                        <li class="field-list">
+                            <div class="field-group">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control form-inputs" placeholder="Client Name">
+                            </div>
+                        </li>
+                        <li class="field-list">
+                            <div class="field-group">
+                                <label for="name" class="form-label">Email</label>
+                                <input type="email" class="form-control form-inputs" placeholder="name@gmail.com">
+                            </div>
+                        </li>
+                        <li class="field-list">
+                            <div class="field-group">
+                                <label for="name" class="form-label">Address</label>
+                                <input type="text" class="form-control form-inputs" placeholder="XYZ Street">
+                            </div>
+                        </li>
+                        <li class="field-list">
+                            <div class="field-group">
+                                <label for="name" class="form-label">Phone</label>
+                                <input type="number" class="form-control form-inputs" placeholder="(123) 456 856">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- END OF INVOICE FORM -->
+
+
+
+            <!-- INVOICE DETAILS -->
+            <div class="invoice-details">
+                <ul class="field-lists">
+                    <li class="field-list">
+                        <div class="field-group">
+                            <label for="name" class="form-label">Invoice Number</label>
+                            <input type="number" class="form-control form-inputs" placeholder=" #00001">
+                        </div>
+                    </li>
+                    <li class="field-list">
+                        <div class="field-group pos_rel ">
+                            <label for="name" class="form-label">Invoice Date</label>
+                            <input type="text" class="form-control form-inputs CP datepicker " placeholder="Date"
+                                readonly>
+                        </div>
+                    </li>
+                    <li class="field-list">
+                        <div class="field-group">
+                            <label for="name" class="form-label">Due Date</label>
+                            <input type="text" class="form-control form-inputs CP datepicker" placeholder="Date"
+                                readonly>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- END OF INVOICE DETAILS -->
+
+
+
+            <!-- INVOICE TABLE -->
+            <div class="invoice-table mT40">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="table-header">
+                                <div>
+                                    <span> DESCRIPTION</span>
+                                </div>
+                            </th>
+                            <th class="table-header">
+                                <div>
+                                    <span>RATE</span>
+                                </div>
+                            </th>
+                            <th class="table-header">
+                                <div>
+                                    <span>QTY</span>
+                                </div>
+                            </th>
+                            <th class="table-header">
+                                <div>
+                                    <span>AMOUNT</span>
+                                </div>
+                            </th>
+                            <th class="table-header">
+                                <div>
+                                    <span>TAX</span>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="table-data">
+                                <div class="CP tal-C">
+                                    <i class="fa-regular fa-circle-xmark"></i>
+                                </div>
+                            </td>
+                            <td class="table-data w360px">
+                                <div>
+                                    <div class="mB5">
+                                        <input type="text" class="form-control form-inputs"
+                                            placeholder="Item Description">
+                                    </div>
+                                    <div>
+                                        <textarea class="form-control form-inputs form-textarea"
+                                            placeholder="Additional Details"></textarea>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="table-data">
+                                <div>
+                                    <input type="number" class="form-control form-inputs" placeholder="Price">
+                                </div>
+                            </td>
+                            <td class="table-data">
+                                <div>
+                                    <input type="number" class="form-control form-inputs" placeholder="Quantity">
+                                </div>
+                            </td>
+                            <td class="table-data">
+                                <div>
+                                    <span>$25.00</span>
+                                </div>
+                            </td>
+                            <td class="table-data">
+                                <div>
+                                    <input type="checkbox">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+                <div class="mT16">
+                    <button class="btn btn-secondary btn-add">Add Item</button>
+                </div>
+            </div>
+            <!-- END OF INVOICE TABLE -->
+
+
+
+            <!-- FINANCIAL DETAILS -->
+            <div class="financial-details mT40">
+                <div class="w50pe">
+                    <ul class="field-lists">
+                        <li class="field-list">
+                            <div class="field-group">
+                                <label for="name" class="form-label">Account #:</label>
+                                <input type="text" class="form-control form-inputs" placeholder="Bank Account Number">
+                            </div>
+                        </li>
+                        <li class="field-list">
+                            <div class="field-group">
+                                <label for="name" class="form-label">Bank Name:</label>
+                                <input type="text" class="form-control form-inputs" placeholder="Insert Bank Name">
+                            </div>
+                        </li>
+                        <li class="field-list">
+                            <div class="field-group">
+                                <label for="name" class="form-label">SWIFT code:</label>
+                                <input type="text" class="form-control form-inputs" placeholder="Insert Code">
+                            </div>
+                        </li>
+                        <li class="field-list">
+                            <div class="field-group">
+                                <label for="name" class="form-label">Country:</label>
+                                <select class="form-control form-inputs form-select">
+                                    <option value="">Choose Country</option>
+                                    <option value="USA">United States</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="France">France</option>
+                                    <option value="Japan">Japan</option>
+                                    <option value="China">China</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="India">India</option>
+                                    <option value="Brazil">Brazil</option>
+                                </select>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w50pe">
+                    <div class="d-flex jC-FE">
+                        <ul class="summary-lists">
+                            <li class="summary-list">
+                                <div class="summary-item">
+                                    <span>Subtotal</span>
+                                    <span>$145</span>
+                                </div>
+                            </li>
+                            <li class="summary-list">
+                                <div class="summary-item">
+                                    <span>Discount </span>
+                                    <span>$10</span>
+                                </div>
+                            </li>
+                            <li class="summary-list">
+                                <div class="summary-item">
+                                    <span>Tax </span>
+                                    <span>0%</span>
+                                </div>
+                            </li>
+                            <li class="summary-list">
+                                <div class="summary-item">
+                                    <span class="mL-auto">$145</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- END OF FINANCIAL DETAILS -->
+
+
+
+            <!-- NOTES CONTAINER -->
+            <div class="notes-container">
+                <label for="name" class="form-label">Notes:</label>
+                <textarea class="form-textarea form-control form-inputs"
+                    placeholder="Notes - For example, Thanks you for doing business with us"></textarea>
+            </div>
+            <!--END OF NOTES CONTAINER -->
+
+
+
+        </section>
+    </div>
+    <!-- END OF INVOICE INFO CARD -->
+
+
+
+    <div class="currency-details-card col-xxl-3 col-xl-12">
+
+
+        <!-- CURRENCY CARD -->
+        <section class="invoice-card currency-card mB24">
+            <div>
+                <div>
+                    <h6 class="card-title">Currency</h6>
+                </div>
+                <ul class="currency-items">
+                    <li class="currency-item">
+                        <a href="#" class="form-control form-dropdown">
+                            <img src="./assets/images/flag-us.svg" alt="Flag USA" class="s20">
+                            <div>
+                                <span>USD - US Dollar</span>
+                            </div>
+                            <div class="mL-auto">
+                                <i class='bx bx-chevron-down'></i>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div>
+                    <h6 class="card-title">Tax</h6>
+                </div>
+                <ul class="currency-items">
+                    <li class="currency-item">
+                        <label class="form-label">Type</label>
+                        <a href="#" class="form-control form-dropdown">
+                            <div>
+                                <span>None</span>
+                            </div>
+                            <div class="mL-auto">
+                                <i class='bx bx-chevron-down'></i>
+                            </div>
+
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div>
+                    <h6 class="card-title">Discount</h6>
+                </div>
+                <ul class="currency-items">
+                    <li class="currency-item">
+                        <label class="form-label">Type</label>
+                        <a href="#" class="form-control form-dropdown">
+                            <div>
+                                <span>None</span>
+                            </div>
+                            <div class="mL-auto">
+                                <i class='bx bx-chevron-down'></i>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+        <!-- END CURRENCY CARD -->
+
+
+
+        <!-- ACTION BTN -->
+        <section class=" invoice-card invoice-actions">
+            <ul class="invoice-action-lists">
+                <li class="invoice-action-list">
+                    <a href="#" class="btn btn-primary btn-send">
+                        Send Invoice
+                    </a>
+                </li>
+                <li class="invoice-action-list">
+                    <a href="#" class="btn btn-primary btn-preview">
+                        Preview
+                    </a>
+                </li>
+                <li class="invoice-action-list">
+                    <a href="#" class="btn btn-primary btn-success">
+                        Save
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- END ACTION BTN -->
+
+
+    </div>
+
+
+
+</div>

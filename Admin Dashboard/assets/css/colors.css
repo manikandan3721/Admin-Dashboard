@@ -1,0 +1,40 @@
+:root {
+    
+    /* solid colors */
+    --c-primary: #060818;
+    --c-secondary:#e0e6ed;
+    --c-white:#fff;
+    --c-dark-blue:#0e1726;
+    --c-navy-blue:#506690;
+    --c-orange:#e7515a;
+    --c-gold:#e2a03f;
+    --c-m-blue:#2196f3;
+    --c-brown:#614c2f;
+    --c-cyan:#009688;
+    --c-teal:#20c997;
+    --c-sky-blue:#61b6cd;
+  
+    /* gray colors */
+    --c-blue-gray:#888ea8;
+    --c-gray : #888ea8;
+    --c-shadow-gray: #3b3f5c;
+    --c-navy-gray:#515365;
+    --c-royal-blue:#4361ee;
+    --c-light-blue:#0d2b46;
+    --c-darkSlate-blue:#1b2e4b;
+    --c-shadow-blue:#191e3a;
+    --c-silver-blue:#bfc9d4;
+    --c-success-green:#1abc9c;
+    --c-light-lavender:#e6e7ee;
+    --c-dark-lavender:#805dca;
+
+    /* shadow colors */
+    --c-blue:rgb(33, 150, 243);
+    --c-shadow-gray:rgba(81, 83, 101, 0.28);
+    --c-slate-gray:rgba(96, 125, 139, 0.54);
+    --c-light-shadow:rgba(255, 255, 255, 0.2);
+    --c-light-shadow-gray:rgba(136, 142, 168, 0.22);
+    --c-bx-shadow:rgba(0 , 0 , 0 );
+    --c-br-shadow:#3d415e;
+    --c-shadow-white:#292c49;
+}
